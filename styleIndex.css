@@ -22,7 +22,7 @@ body{
   top: 19.36px;
 }
 
-.backButton {
+.button__back {
   position: absolute;
   width: 35px;
   height: 38px;
@@ -37,7 +37,7 @@ body{
   outline-offset: 0;
 }
 
-.textLike{
+.block__text-like{
   position: absolute;
   width: 259px;             
   height: 64px;
@@ -47,7 +47,7 @@ body{
   /*background-color: maroon;*/
 }
 
-.textGold{                   
+.text__gold{                   
   /*position: absolute;*/
   width: 224px;
   height: 33px;
@@ -59,28 +59,24 @@ body{
   font-weight: normal;
   font-size: 35px;
   line-height: 32px;
-  /* identical to box height */
-  /* text colour */
   color: #252C3B;  
 }
 
-.textSto{                     
+.text__fruit{                     
   width: 184px;
   height: 11px;
   left: 66px;
   top: 79px;
-
   font-family: 'Roboto Condensed';
   font-style: normal;
   font-weight: normal;
   font-size: 11px;
   line-height: 10px;
-  /* identical to box height */
   color: #596273;
   margin-top: 20px;
 }
 
-.heartButton{
+.button__heart{
   position: absolute;
   width: 22px;
   height: 22px;
@@ -92,13 +88,11 @@ body{
   display: block;
 }
 
-.heartButton:focus {
+.button__heart:focus {
   outline: none;
 }
 
-
-
-.restangle{
+.restangle__center{
   position: absolute;
   width: 230px;
   height: 289px;
@@ -109,47 +103,42 @@ body{
   background-image: url("./images/rectangle.svg");  
 }
 
-.imgMed1{
+.image__center{
   position: absolute;
   width: 194px;
   height: 289px;
   left: 90px;
   top: 146px;
-  background: url("./images/imgMed1.svg") center no-repeat; 
-  
+  background: url("./images/imgMed1.svg") center no-repeat;
 }
-.restangle-left{
+.restangle__left{
   position: absolute;
   width: 57px;
   height: 289px;
   left: 0;
-  top: 129px;
-  
+  top: 129px;  
   background: #F6F6F8;
   border-radius: 0 14px 14px 0;
   background-image: url("./images/rectangle.svg");  
 }
 
-.restangle-left-block {
+.block__restangle__left {
   display: block;
   position: absolute;
   width: 57px;
   height: 289px;  
   top: 128px;    
-  border-radius: 0 14px 14px 0;
-    
+  border-radius: 0 14px 14px 0;    
 }
 
-.imagesMedLeft{
+.image__left{
   margin: 0;
   height: 289px;
   background: url("./images/image-left.svg") no-repeat;
-  border-radius: 0 14px 14px 0;
-  
-  
+  border-radius: 0 14px 14px 0; 
 } 
 
-.restangle-right{
+.restangle__right{
   position: absolute;
   width: 57px;
   height: 289px;
@@ -160,7 +149,7 @@ body{
   background-image: url("./images/rectangle.svg");
 }
 
-.restangle-right-block{
+.block__restangle__right{
   display: block;
   position: absolute;
   width: 57px;
@@ -170,18 +159,14 @@ body{
   border-radius: 14px 0 0 14px;    
 }
 
-.imagesMedRinght{
+.image__ringht{
   width: 57px;
   height: 289px;
   background-image: url("./images/image-r.svg");
   border-radius: 14px 0 0 14px;  
 }
 
-
-
-
-
-.good{
+.stiker__is-good{
   position: absolute;
   width: 32px;
   height: 32px;
@@ -190,29 +175,27 @@ body{
   background: url("./images/good.svg");
 }
 
-.quantity{                 /*что бы не прыгало, добавить бутылку*/
+.input__quantity{                 /*что бы не прыгало, добавить бутылку*/
   position: absolute;
   width: 217px;
   height: 53px;
   left: 79px;
   top: 459px;
-
   background: #F6F6F8;
   border-radius: 33px; 
   border: 0; 
-  font-family: Roboto;
+  font-family: "Roboto";
   font-style: normal;
   font-weight: normal;
   font-size: 13px;  
   line-height: 12px;  
-  transition: all .3s;    /*сам добавил*/
- 
+  transition: all .3s;     
   text-indent: 29px;
 }
 
-.quantity:hover, .quantity:focus{
+.input__quantity:hover, .input__quantity:focus{
   border: 2px solid #00EAB2;
-  outline:none;           /*сам добавил*/
+  outline:none;           
 }
 
 .price {
@@ -221,57 +204,45 @@ body{
   height: 33px;
   left: 133px;
   top: 548px;
-
   font-family: 'Roboto Condensed';
   font-style: normal;
   font-weight: normal;
   font-size: 35px;
-  line-height: 32px;
-  /* identical to box height */
-  /* text colour */
+  line-height: 32px;  
   color: #252C3B;
 }
 
-.nowButton{                    /*надо разобраться с шрифтом*/
+.button__purchase{                    
   position: absolute;
   width: 219px;
   height: 49px;
   left: 78px;
   top: 613px;
-
   background: #FF416E;
   border-radius: 8px;
   border: 0;
-
   font-family: 'Roboto Condensed';
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 13px;
-
   color: #FFFFFF;
 }
 
-.nowButton:focus {
+.button__purchase:focus {
   outline: none;
 }
 
-
-.taxes{
+.text__below{
   position: absolute;
   width: 168px;
   height: 10px;
   left: 96px;
   top: 676px;
-
   font-family: 'Roboto Condensed';
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
   line-height: 9px;
-  /* identical to box height */
-
-
   color: #8F98A8;
-
 }

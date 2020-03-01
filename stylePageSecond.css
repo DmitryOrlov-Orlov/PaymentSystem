@@ -1,0 +1,15 @@
+body{
+  position: relative;
+  width: 375px;
+  height: 708px;
+  background: #FFFFFF;  
+  margin: 0 auto;  
+  font-style: 'Roboto Condensed';
+  background-color: cyan;
+}
+
+.container{
+  width: 375px;
+  height: 708px;
+  background-color: darkkhaki;
+}
