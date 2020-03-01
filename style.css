@@ -1,0 +1,235 @@
+
+body{
+  position: relative;
+  width: 375px;
+  height: 708px;
+  background: #FFFFFF;  
+  margin: 0 auto;
+  
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+  /*background-color: limegreen;*/
+}
+
+.arrow{
+  background: url("./images/arrow.svg");
+  position: absolute;
+  width: 78.36px;
+  height: 8.28px;
+  left: 32.64px;
+  top: 19.36px;
+}
+.backButton {
+  position: absolute;
+  width: 35px;
+  height: 38px;
+  left: 0px;
+  top: 0px;
+  background-image: url("./images/backButton.svg");
+  border: 0;
+}
+
+.back{
+  position: absolute;
+width: 79px;
+height: 12px;
+left: 125px;
+top: 17px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 11px;
+/* identical to box height */
+
+
+color: #252B35;
+}
+
+.textLike{
+  position: absolute;
+  width: 260px;             /*259*/
+  height: 64px;
+  left: 66px;
+  top: 26px;
+
+  /*background-color: maroon;*/
+}
+
+.textGold{                    /*надо разобраться со шрифтом*/
+  /*position: absolute;*/
+  width: 224px;
+  height: 33px;
+  left: 66px;
+  top: 26px;
+
+  font-family: Roboto Condensed;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 32px;
+  /* identical to box height */
+  /* text colour */
+  color: #252C3B;
+  
+}
+
+.textSto{                     /*надо разобраться с шрифтом*/
+  width: 184px;
+  height: 11px;
+  left: 66px;
+  top: 79px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 10px;
+  /* identical to box height */
+  color: #596273;
+  margin-top: 20px;
+}
+
+.heartButton{
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  left: 303px;
+  top: 44px;
+  background-image: url("./images/heartButton.svg");
+  border: 0;
+  border-radius: 50%;
+  display: block;
+}
+.heartButton:focus {
+  outline: none;
+}
+
+/* .imagesMed{
+  position: absolute;
+  width: 660px;
+  height: 306px;
+  left: -111px;
+  top: 129px;
+
+  background-color: mediumvioletred;
+} */
+
+.restangle{
+  position: absolute;
+  width: 230px;
+  height: 289px;
+  left: 73px;
+  top: 146px;
+  background: #F6F6F8;
+  border-radius: 14px;
+  background-image: url("./images/rectangle.svg");  
+}
+
+.imgMed1{
+  position: absolute;
+  width: 194px;
+  height: 289px;
+  left: 90px;
+  top: 146px;
+  background: url("./images/imgMed1.svg") center no-repeat; 
+}
+
+.good{
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  left: 281px;
+  top: 164px;
+  background: url("./images/good.svg");
+}
+
+.quantity{                 /*что бы не прыгало, добавить бутылку*/
+  position: absolute;
+  width: 217px;
+  height: 53px;
+  left: 79px;
+  top: 459px;
+
+  background: #F6F6F8;
+  border-radius: 33px; 
+  border: 0; 
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;  
+  line-height: 12px;  
+  transition: all .3s;    /*сам добавил*/
+ 
+  text-indent: 29px;
+}
+
+.quantity:hover, .quantity:focus{
+  border: 2px solid #00EAB2;
+  outline:none;           /*сам добавил*/
+}
+
+.price {
+  position: absolute;
+  width: 108px;
+  height: 33px;
+  left: 133px;
+  top: 548px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 32px;
+  /* identical to box height */
+  /* text colour */
+  color: #252C3B;
+}
+
+.nowButton{                    /*надо разобраться с шрифтом*/
+  position: absolute;
+  width: 219px;
+  height: 49px;
+  left: 78px;
+  top: 613px;
+
+  background: #FF416E;
+  border-radius: 8px;
+  border: 0;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 13px;
+
+  color: #FFFFFF;
+}
+
+.nowButton:focus {
+  outline: none;
+}
+
+
+.taxes{
+  position: absolute;
+  width: 168px;
+  height: 10px;
+  left: 96px;
+  top: 676px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 9px;
+  /* identical to box height */
+
+
+  color: #8F98A8;
+
+}
