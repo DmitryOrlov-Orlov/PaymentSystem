@@ -1,17 +1,16 @@
-
 body{
   position: relative;
   width: 375px;
   height: 708px;
   background: #FFFFFF;  
-  margin: 0 auto;
-  
+  margin: 0 auto;  
+  font-style: 'Roboto Condensed';
 }
 
 .container{
-  width: 100%;
-  height: 100%;
-  /*background-color: limegreen;*/
+  width: 375px;
+  height: 708px;
+  /* background-color: limegreen; */
 }
 
 .arrow{
@@ -22,6 +21,7 @@ body{
   left: 32.64px;
   top: 19.36px;
 }
+
 .backButton {
   position: absolute;
   width: 35px;
@@ -32,27 +32,14 @@ body{
   border: 0;
 }
 
-.back{
-  position: absolute;
-width: 79px;
-height: 12px;
-left: 125px;
-top: 17px;
-
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 12px;
-line-height: 11px;
-/* identical to box height */
-
-
-color: #252B35;
+.backButton:active, .backButton:hover, .backButton:focus {
+  outline: 0;
+  outline-offset: 0;
 }
 
 .textLike{
   position: absolute;
-  width: 260px;             /*259*/
+  width: 259px;             
   height: 64px;
   left: 66px;
   top: 26px;
@@ -60,31 +47,30 @@ color: #252B35;
   /*background-color: maroon;*/
 }
 
-.textGold{                    /*надо разобраться со шрифтом*/
+.textGold{                   
   /*position: absolute;*/
   width: 224px;
   height: 33px;
   left: 66px;
   top: 26px;
 
-  font-family: Roboto Condensed;
+  font-family: 'Roboto Condensed';
   font-style: normal;
   font-weight: normal;
   font-size: 35px;
   line-height: 32px;
   /* identical to box height */
   /* text colour */
-  color: #252C3B;
-  
+  color: #252C3B;  
 }
 
-.textSto{                     /*надо разобраться с шрифтом*/
+.textSto{                     
   width: 184px;
   height: 11px;
   left: 66px;
   top: 79px;
 
-  font-family: Roboto;
+  font-family: 'Roboto Condensed';
   font-style: normal;
   font-weight: normal;
   font-size: 11px;
@@ -105,19 +91,12 @@ color: #252B35;
   border-radius: 50%;
   display: block;
 }
+
 .heartButton:focus {
   outline: none;
 }
 
-/* .imagesMed{
-  position: absolute;
-  width: 660px;
-  height: 306px;
-  left: -111px;
-  top: 129px;
 
-  background-color: mediumvioletred;
-} */
 
 .restangle{
   position: absolute;
@@ -137,7 +116,70 @@ color: #252B35;
   left: 90px;
   top: 146px;
   background: url("./images/imgMed1.svg") center no-repeat; 
+  
 }
+.restangle-left{
+  position: absolute;
+  width: 57px;
+  height: 289px;
+  left: 0;
+  top: 129px;
+  
+  background: #F6F6F8;
+  border-radius: 0 14px 14px 0;
+  background-image: url("./images/rectangle.svg");  
+}
+
+.restangle-left-block {
+  display: block;
+  position: absolute;
+  width: 57px;
+  height: 289px;  
+  top: 128px;    
+  border-radius: 0 14px 14px 0;
+    
+}
+
+.imagesMedLeft{
+  margin: 0;
+  height: 289px;
+  background: url("./images/image-left.svg") no-repeat;
+  border-radius: 0 14px 14px 0;
+  
+  
+} 
+
+.restangle-right{
+  position: absolute;
+  width: 57px;
+  height: 289px;
+  left: 319px;
+  top: 129px;
+  background: #F6F6F8;
+  border-radius: 14px 0 0 14px;
+  background-image: url("./images/rectangle.svg");
+}
+
+.restangle-right-block{
+  display: block;
+  position: absolute;
+  width: 57px;
+  height: 289px;
+  left: 319px;
+  top: 129px;
+  border-radius: 14px 0 0 14px;    
+}
+
+.imagesMedRinght{
+  width: 57px;
+  height: 289px;
+  background-image: url("./images/image-r.svg");
+  border-radius: 14px 0 0 14px;  
+}
+
+
+
+
 
 .good{
   position: absolute;
@@ -180,7 +222,7 @@ color: #252B35;
   left: 133px;
   top: 548px;
 
-  font-family: Roboto;
+  font-family: 'Roboto Condensed';
   font-style: normal;
   font-weight: normal;
   font-size: 35px;
@@ -201,7 +243,7 @@ color: #252B35;
   border-radius: 8px;
   border: 0;
 
-  font-family: Roboto;
+  font-family: 'Roboto Condensed';
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -222,7 +264,7 @@ color: #252B35;
   left: 96px;
   top: 676px;
 
-  font-family: Roboto;
+  font-family: 'Roboto Condensed';
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
