@@ -13,15 +13,6 @@ body{
   /* background-color: limegreen; */
 }
 
-.arrow{
-  background: url("./images/arrow.svg");
-  position: absolute;
-  width: 78.36px;
-  height: 8.28px;
-  left: 32.64px;
-  top: 19.36px;
-}
-
 .button__back {
   position: absolute;
   width: 35px;
