@@ -1,0 +1,22 @@
+.heart{
+  
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-image: url('../images/heart.svg');
+  top: 45px;
+  left: 309px;
+}
+
+.purchase__button{  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 219px;
+  height: 49px;
+  border-radius: 8px;  
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 13px;
+  background: #FF416E;
+}

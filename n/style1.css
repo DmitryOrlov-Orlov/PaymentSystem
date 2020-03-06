@@ -1,0 +1,45 @@
+@font-face{
+  font-family: 'Roboto Condensed';
+  src:url('./fonts/Roboto_Condensed/RobotoCondensed-Bold.ttf');
+  src:url('./fonts/Roboto_Condensed/RobotoCondensed-BoldItalic.ttf');
+  src:url('./fonts/Roboto_Condensed/RobotoCondensed-Italic.ttf');
+  src:url('./fonts/Roboto_Condensed/RobotoCondensed-Light.ttf');
+  src:url('./fonts/Roboto_Condensed/RobotoCondensed-LightItalic.ttf');
+  src:url('./fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf')
+}
+
+body{
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  width: 345px;
+  height: 708px;
+  background-color: lawngreen;
+  margin: 0 auto;
+}
+
+.header{
+  display: flex;
+  width: 262px;
+  height: 64px;
+  background-color: lightcoral;
+}
+
+.text__top{
+  font-size: 35px;
+  line-height: 32px;
+  color: #252C3B;  
+}
+
+.text__buttom{
+  font-size: 11px;
+  line-height: 10px;
+  color: #596273;
+}
