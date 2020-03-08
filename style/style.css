@@ -12,8 +12,7 @@ body{
   width: 345px;
   height: 708px;  
   margin: 0 auto;
-
-  background-color: lightcoral;
+/*   background-color: lightcoral; */
 }
 
 .header{
@@ -24,19 +23,19 @@ body{
   height: 64px;  
   margin: 0 auto;
   margin-top: 29px;
-
-  background-color: lightgreen;
+  /* background-color: lightgreen; */
 }
 
 .carousel{  
   width: 100%;
   height: 306px;
   margin-top: 26px;
-
-  background-color: limegreen;
+  /* background-color: limegreen; */
 }
 
 .input-button{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   width: 217px;
   height: 53px;
   margin: 0 auto;
@@ -50,8 +49,7 @@ body{
   height: 33px;
   margin: 0 auto;
   margin-top: 29px;
-
-  background-color: mediumaquamarine;
+  /* background-color: mediumaquamarine; */
 }
 
 .purchase{
@@ -63,6 +61,13 @@ body{
   height: 74px;
   margin: 0 auto;
   margin-top: 32px;
+  /* background-color: mediumpurple; */
+}
 
-  background-color: mediumpurple;
+.purchase__bottom{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 186px;
+  height: 12px;
 }

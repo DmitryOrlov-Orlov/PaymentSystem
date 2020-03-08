@@ -6,37 +6,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style1.css">
-
   <link rel="stylesheet" href="./style/fonts.css">
   <link rel="stylesheet" href="./style/style.css">
   <link rel="stylesheet" href="./style/buttons.css">
   <link rel="stylesheet" href="./style/absolute_elements.css">
-  
+  <link rel="stylesheet" href="./style/images.css">
+
   <title>Product selection</title>
 </head>
 
 <body>
-
   <div class="container">
-    <div class="header">
-      <h1 class="header__text-top">Golden fruit jam</h1>      
-      <p class="header__text-bottom">100% Fruit extract jam with add sugar</p>
-      <span class="heart"></span>
-      
-    </div>
-    <div class="carousel"></div>
-    <div class="input-button">
+    <!-- блоки с абсолютным позионорованием -->
+    <span class="heart"></span>
+    <span class="like"></span>
 
+    <!-- сверху две строки с текстом -->
+    <div class="header">
+      <h1 class="header__text-top">Golden fruit jam</h1>
+      <p class="header__text-bottom">100% Fruit extract jam with add sugar</p>
     </div>
+
+    <!-- карусель -->
+    <div class="carousel"></div>
+
+    <!-- поле для ввода и кнопка -->
+    <div class="input-button">
+      <input type="text" name="" id="" class="input-button__input" placeholder="Quantity">
+      <button class="input-button__button">1 Bottle</button>
+    </div>
+
+    <!-- цена -->
     <div class="price">$10.99</div>
+
+    <!-- нижняя кнока и строка -->
     <div class="purchase">
       <a href="" class="purchase__button">Purchase Now</a>
-      <p class="purchase__text">Taxes and delivery charges applicable</p>
+      <div class="purchase__bottom">
+        <p class="purchase__text">Taxes and delivery charges applicable</p>
+        <span class="purchase__vector"></span>
+      </div>
     </div>
-
-    <!-- Ниже расположены элементы в абсолюте -->
-    
-    
   </div>
 </body>
 

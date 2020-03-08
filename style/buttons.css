@@ -1,12 +1,22 @@
-.heart{
-  
+/*начало абсолютное позиционирование */
+.heart{  
+  position: absolute;
+  margin: 42px 0px 0 281px;
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background-image: url('../images/heart.svg');
-  top: 45px;
-  left: 309px;
+  background-image: url('../images/indexImages/heart.svg');
 }
+
+.like{
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: url('../images/indexImages/like.svg');
+  margin: 160px 0 0 272px; /* нужно dscnfdbnm */
+}
+/* конец абсолютного позиционирования */
+
 
 .purchase__button{  
   display: flex;
@@ -19,4 +29,31 @@
   font-size: 14px;
   line-height: 13px;
   background: #FF416E;
+}
+
+.input-button__input{
+  width: 79.5px;
+  height: 51px;
+  border-radius: 33px 0px 0px 33px;
+  outline: none;
+  padding-left: 29px;
+  border: none;
+  font-size: 13px;
+  line-height: 12px;
+  color: #979AA1;
+  background: #F6F6F8;
+}
+
+.input-button__button{
+  padding: 0;
+  width: 108.5px;
+  height: 53px;  
+  border-radius: 0 33px 33px 0;
+  outline: none;
+  border: none;
+  font-size: 13px;
+  line-height: 12px;
+  color: #596273;
+  background: #F6F6F8;
+  background: url('../images/indexImages/bottle.svg') 13px no-repeat;  
 }
