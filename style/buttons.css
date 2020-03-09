@@ -1,7 +1,8 @@
-/*начало абсолютное позиционирование */
+/*начало абсолютного позиционирования */
 .heart{  
+  display: flex;
   position: absolute;
-  margin: 42px 0px 0 281px;
+  margin: 42px 0px 0 309px;
   width: 22px;
   height: 22px;
   border-radius: 50%;
@@ -13,8 +14,17 @@
   width: 32px;
   height: 32px;
   background: url('../images/indexImages/like.svg');
-  margin: 160px 0 0 272px; /* нужно dscnfdbnm */
+  margin: 160px 0 0 281px; /* нужно dscnfdbnm */
 }
+
+/* стили для ВТОРОЙ страницы */
+.button__back{
+  position: absolute;
+  width: 35px;
+  height: 38px;
+  background: url('../images/CartScreen/buttonBack.svg');
+}
+
 /* конец абсолютного позиционирования */
 
 
@@ -56,4 +66,23 @@
   color: #596273;
   background: #F6F6F8;
   background: url('../images/indexImages/bottle.svg') 13px no-repeat;  
+}
+
+
+
+/*  крайняя кнопка  */
+.button__processed{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 219px;
+  height: 49px;
+  background: #475062;
+  border-radius: 8px;  
+  margin: 0 auto;
+  margin-top: 50px;
+  font-size: 14px;
+  line-height: 13px;
+  color: #FFFFFF;
+  text-decoration: none;
 }
