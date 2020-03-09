@@ -24,9 +24,7 @@
   height: 38px;
   background: url('../images/CartScreen/buttonBack.svg');
 }
-
 /* конец абсолютного позиционирования */
-
 
 .purchase__button{  
   display: flex;
@@ -67,8 +65,6 @@
   background: #F6F6F8;
   background: url('../images/indexImages/bottle.svg') 13px no-repeat;  
 }
-
-
 
 /*  крайняя кнопка  */
 .button__processed{
