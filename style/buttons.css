@@ -18,7 +18,7 @@
 }
 
 /* стили для ВТОРОЙ страницы */
-.button__back{
+.button-back{
   position: absolute;
   width: 35px;
   height: 38px;
@@ -26,7 +26,7 @@
 }
 /* конец абсолютного позиционирования */
 
-.purchase__button{  
+.purchase-button{  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,7 +40,7 @@
   color: #FFFFFF;
 }
 
-.input-button__input{
+.input-button-input{
   width: 79.5px;
   height: 51px;
   border-radius: 33px 0px 0px 33px;
@@ -53,7 +53,7 @@
   background: #F6F6F8;
 }
 
-.input-button__button{
+.input-button-button{
   padding: 0;
   width: 108.5px;
   height: 53px;  
@@ -68,7 +68,7 @@
 }
 
 /*  крайняя кнопка  */
-.button__processed{
+.button-processed{
   display: flex;
   align-items: center;
   justify-content: center;

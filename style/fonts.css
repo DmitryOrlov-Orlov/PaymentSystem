@@ -8,14 +8,14 @@
   src: url('../fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf');
 }
 
-.header__text-top{
+.header-text-top{
   font-size: 35px;
   line-height: 32px;
   margin: 0;
   color: #252C3B;
 }
 
-.header__text-bottom{
+.header-text-bottom{
   font-size: 11px;
   line-height: 10px;
   margin: 0;
@@ -28,7 +28,7 @@
   color: #252C3B;
 }
 
-.purchase__text{
+.purchase-text{
   font-size: 10px;
   line-height: 9px;
   margin: 0;  
@@ -36,7 +36,7 @@
 }
 
 /* стили для ВТОРОЙ страницы */
-.upper__text{
+.upper-text{
   font-size: 20px;
   line-height: 19px;
   color: #252C3B;

@@ -4,7 +4,6 @@
   width: 356px;
   height: 77px;
   margin: 0 0 2px 12px;  
-  /* background-color: palegreen; */
 }
 
 .rectangle{
@@ -15,14 +14,13 @@
   background: #F6F6F8;
 }
 
-.repeated__text{
+.repeated-text{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 95px;
   height: 31px;
   margin: 17px 26px 0 14.88px;
-  /* background-color: seagreen; */
 }
 
 .text-top{
@@ -61,48 +59,43 @@
 }
 
 /* изображение для первого блока */
-.repeated__img-first{
+.repeated-img-first{
   width: 39.64px;
   height: 59.06px;
   margin: 5px 0 0 5.47px;
-  background: #F6F6F8;
-  background: url('../../images/CartScreen/first-img.svg') center no-repeat;  
+  background: url('../../images/CartScreen/first-img.svg') center no-repeat #F6F6F8;  
 }
 
 /* изображение для второго блока */
-.repeated__img-second{
+.repeated-img-second{
   width: 39.64px;
   height: 59.06px;
   margin: 5px 0 0 5.47px;
-  background: #F6F6F8;
-  background: url('../../images/CartScreen/second-img.svg') center no-repeat;  
+  background: url('../../images/CartScreen/second-img.svg') center no-repeat #F6F6F8;  
 }
 
 /* изображение для третьего блока */
-.repeated__img-third{
+.repeated-img-third{
   width: 39.64px;
   height: 59.06px;
   margin: 5px 0 0 5.47px;
-  background: #F6F6F8;
-  background: url('../../images/CartScreen/third-img.svg') center no-repeat;  
+  background: url('../../images/CartScreen/third-img.svg') center no-repeat #F6F6F8;  
 }
 
 /* изображение для четвертого блока */
-.repeated__img-fourth{
+.repeated-img-fourth{
   width: 39.64px;
   height: 59.06px;
   margin: 5px 0 0 5.47px;
-  background: #F6F6F8;
-  background: url('../../images/CartScreen/fourth-img.svg') center no-repeat;  
+  background: url('../../images/CartScreen/fourth-img.svg') center no-repeat #F6F6F8;  
 }
 
 /* изображение для пятого блока */
-.repeated__img-fifth{
+.repeated-img-fifth{
   width: 39.64px;
   height: 59.06px;
   margin: 5px 0 0 5.47px;
-  background: #F6F6F8;
-  background: url('../../images/CartScreen/fifth-img.svg') center no-repeat;  
+  background: url('../../images/CartScreen/fifth-img.svg') center no-repeat #F6F6F8;  
 }
 
 /* верхний отспут у блока total amount */
