@@ -1,0 +1,33 @@
+.header-text{
+  display: flex;
+  width: 375px;
+  height: 45px;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 15px;
+  line-height: 18px;
+  color: #252C3B;
+  background-color: tomato;
+}
+
+.clicks-text{
+  display: block;
+  width: 264px;
+  height: 23px;
+  margin: 0 auto;
+  margin-top: 35px;   /* это подправить */
+  margin-bottom: 35px;
+  font-size: 10px;
+  line-height: 12px;
+  color: #6E7A90;
+  background-color: turquoise;
+}
+
+.history-address{
+  display: flex;
+  width:278px;
+  height:378px;
+  margin: 0 auto;
+  background-color: violet;
+}

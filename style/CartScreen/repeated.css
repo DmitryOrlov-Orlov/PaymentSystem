@@ -1,29 +1,24 @@
 .crloll{
   width: 375px;
-  height: 421px;
+  height: 408px;
   overflow: scroll;
+  margin-top: 11px;
 }
 
 .crloll::-webkit-scrollbar{
   width: 5px;
 }
+
 .crloll::-webkit-scrollbar-thumb{
   border-width:1px 1px 1px 2px;
   border-color: #777;
   background-color: rgb(186, 186, 187);;
 }
 
-.repeated{
-  display: flex;
-  align-items: flex-end;
-  position: relative;
-  width: 356px;
-  height: 77px;
-  margin: 0 0 7px 12px;  
-}
-
 .rectangle{
   display: flex;
+  position: relative;
+  margin: 7px 0 0px 12px; 
   width: 351px;
   height: 71px;
   border-radius: 11px;
@@ -93,8 +88,12 @@
   height: 17px;
   top: 0;
   right: 0;
+  margin: -6px -5px 0 0;
   border-radius: 50%;
   background: url('../../images/CartScreen/cross.svg') center no-repeat;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
 
 /* изображение для первого блока */
@@ -138,12 +137,14 @@
 }
 
 .rectangle-total{
-  display: flex;
+  display: flex;  
   width: 351px;
   height: 71px;
-  margin: 22px 0 0 12px;
-  border-radius: 11px;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 18px 0 19px;
+  margin: 22px 0 0 12px;
+  border-radius: 11px;  
   background: #F6F6F8;
 }
 
@@ -151,19 +152,16 @@
   font-size: 20px;
   line-height: 19px;
   color: #000000;
-  margin-left: 19px;
 }
 
 .total-bottom{
   font-size: 11px;
   line-height: 10px;
   color: #596273;
-  margin-left: 19px;
 }
 
 .total-price{
   font-size: 20px;
   line-height: 19px;
   color: #000000;
-  margin-left: 151px;
 }
