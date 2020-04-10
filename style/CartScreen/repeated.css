@@ -1,15 +1,15 @@
-.crloll{
+.scroll{
   width: 375px;
   height: 408px;
   overflow: scroll;
   margin-top: 11px;
 }
 
-.crloll::-webkit-scrollbar{
+.scroll::-webkit-scrollbar{
   width: 5px;
 }
 
-.crloll::-webkit-scrollbar-thumb{
+.scroll::-webkit-scrollbar-thumb{
   border-width:1px 1px 1px 2px;
   border-color: #777;
   background-color: rgb(186, 186, 187);;
@@ -102,6 +102,8 @@
   height: 59.06px;
   margin: 5px 0 0 5.47px;
   background: url('../../images/CartScreen/first-img.svg') center no-repeat #F6F6F8;  
+  border: 2px solid #F6F6F8;
+  
 }
 
 /* изображение для второго блока */
@@ -110,6 +112,7 @@
   height: 59.06px;
   margin: 5px 0 0 5.47px;
   background: url('../../images/CartScreen/second-img.svg') center no-repeat #F6F6F8;  
+  
 }
 
 /* изображение для третьего блока */
@@ -143,7 +146,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 18px 0 19px;
-  margin: 22px 0 0 12px;
+  margin: 22px 0 50px 12px;
   border-radius: 11px;  
   background: #F6F6F8;
 }
