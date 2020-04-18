@@ -77,10 +77,16 @@
   text-align: center;
   background-color: #F6F6F8;
   outline: none;
-  color: #252B35;  
+  color: #252B35; 
+ 
 }
 .quantity::-webkit-input-placeholder{
   color: #252B35;  
+  
+}
+.quantity::-webkit-outer-spin-button,
+.quantity::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 .cross{
   position: absolute;
@@ -97,46 +103,11 @@
 }
 
 /* изображение для первого блока */
-.repeated-img-first{
+.repeated-img{
   width: 39.64px;
   height: 59.06px;
   margin: 5px 0 0 5.47px;
-  background: url('../../images/CartScreen/first-img.svg') center no-repeat #F6F6F8;  
   border: 2px solid #F6F6F8;
-  
-}
-
-/* изображение для второго блока */
-.repeated-img-second{
-  width: 39.64px;
-  height: 59.06px;
-  margin: 5px 0 0 5.47px;
-  background: url('../../images/CartScreen/second-img.svg') center no-repeat #F6F6F8;  
-  
-}
-
-/* изображение для третьего блока */
-.repeated-img-third{
-  width: 39.64px;
-  height: 59.06px;
-  margin: 5px 0 0 5.47px;
-  background: url('../../images/CartScreen/third-img.svg') center no-repeat #F6F6F8;  
-}
-
-/* изображение для четвертого блока */
-.repeated-img-fourth{
-  width: 39.64px;
-  height: 59.06px;
-  margin: 5px 0 0 5.47px;
-  background: url('../../images/CartScreen/fourth-img.svg') center no-repeat #F6F6F8;  
-}
-
-/* изображение для пятого блока */
-.repeated-img-fifth{
-  width: 39.64px;
-  height: 59.06px;
-  margin: 5px 0 0 5.47px;
-  background: url('../../images/CartScreen/fifth-img.svg') center no-repeat #F6F6F8;  
 }
 
 .rectangle-total{
