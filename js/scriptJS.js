@@ -1,7 +1,7 @@
-let arr = [1,2,3,4,5,6,7,8,9,10];
+let btn = document.querySelector('.btn');
+let text = document.querySelector('.text');
 
-arr.push('Привет');
-arr.shift();
-arr.unshift("ага");
 
-alert(arr);
+btn.onclick = function (){
+  text.classList.toggle('text');
+}

@@ -61,6 +61,8 @@
   background-color: #F6F6F8;
   outline: none;
   color: #252B35;  
+
+  overflow: hidden;
 }
 
 .quantity{
@@ -78,16 +80,16 @@
   background-color: #F6F6F8;
   outline: none;
   color: #252B35; 
- 
 }
 .quantity::-webkit-input-placeholder{
-  color: #252B35;  
-  
+  color: #252B35;    
 }
+
 .quantity::-webkit-outer-spin-button,
 .quantity::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
+
 .cross{
   position: absolute;
   width: 17px;

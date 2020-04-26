@@ -1,59 +1,56 @@
 var cardsData = [{
     id: 1,
-    imgUrl: './images/CartScreen/first-img.svg',
+    imgUrl: './images/CartScreen/img-first.svg',
+    imgUrlBig: './images/CartScreen/img-first-big.svg',
     textTop: 'Golden fruit jam',
-    textBottom: 'Quantity 01 Bottle',
     price: 11.99,
     amount: 1
   },
   {
     id: 2,
-    imgUrl: './images/CartScreen/second-img.svg',
+    imgUrl: './images/CartScreen/img-second.svg',
+    imgUrlBig: './images/CartScreen/img-first-big.svg',
     textTop: 'Golden fruit jam',
-    textBottom: 'Quantity 01 Bottle',
     price: 8.00,
     amount: 1
   },
   {
     id: 3,
-    imgUrl: './images/CartScreen/third-img.svg',
+    imgUrl: './images/CartScreen/img-three.svg',
+    imgUrlBig: './images/CartScreen/img-first-big.svg',
     textTop: 'Golden fruit jam',
-    textBottom: 'Quantity 01 Bottle',
     price: 11.99,
     amount: 2
   },
   {
     id: 4,
-    imgUrl: './images/CartScreen/fourth-img.svg',
+    imgUrl: './images/CartScreen/img-fourth.svg',
+    imgUrlBig: './images/CartScreen/img-first-big.svg',
     textTop: 'Golden fruit jam',
-    textBottom: 'Quantity 01 Bottle',
     price: 10.00,
     amount: 3
   },
   {
     id: 5,
-    imgUrl: './images/CartScreen/fifth-img.svg',
+    imgUrl: './images/CartScreen/img-fourth.svg',
+    imgUrlBig: './images/CartScreen/img-first-big.svg',
     textTop: 'Golden fruit jam',
-    textBottom: 'Quantity 01 Bottle',
-    price: 10.00,
+    price: 15.00,
     amount: 5
-  },
-  {
-    id: 6,
-    imgUrl: './images/CartScreen/fifth-img.svg',
-    textTop: 'Golden fruit jam',
-    textBottom: 'Quantity 01 Bottle',
-    price: 10.00,
-    amount: 4
-  }, {
-    id: 7,
-    imgUrl: './images/CartScreen/fifth-img.svg',
-    textTop: 'Golden fruit jam',
-    textBottom: 'Quantity 01 Bottle',
-    price: 10.00,
-    amount: 9
   }
 ]
+
+
+  function createBottle(product) {
+    let ilSpan = document.createElement('span');
+    ilSpan.innerHTML = `
+      <span class="gallery-block">
+        <div class="gallery-img" style="background-image:url(${product.imgUrlBig})"></div>
+        <span class="like"></span>
+      </span>  
+    `  
+    return ilSpan;
+  }
 
 function createCard(product) {
   var rectangle = document.createElement('div');
@@ -62,7 +59,7 @@ function createCard(product) {
       <span class='repeated-img' style="background-image:url(${product.imgUrl}"></span>
       <span class='repeated-text'>
         <span class='text-top'>${product.textTop}</span>
-        <span class='text-bottom'>${product.textBottom}</span>
+        <span class='text-bottom'>Quantity ${product.amount} Bottle</span>
       </span>
       <input class='quantity' placeholder=1 value='${product.amount}' type='number' data-id=${product.id}></input>
       <span class='quantity-price'>$${(product.price * product.amount).toFixed(2)}</span>
@@ -72,14 +69,26 @@ function createCard(product) {
   return rectangle;
 }
 
-function renderList() {
-  var scroll = document.querySelector('.scroll');
-  scroll.innerHTML = '';
 
-  cardsData.forEach(element => {
-    var cardItem = createCard(element);
-    scroll.appendChild(cardItem);
-  })
+function renderList() {
+
+    let galleryUl = document.querySelector('.gallery-ul');
+    galleryUl.innerHTML = '';
+
+    cardsData.forEach(element => {
+      let bootleItem = createBottle(element);
+      galleryUl.appendChild(bootleItem);
+    })
+
+
+   let scroll = document.querySelector('.scroll');
+   scroll.innerHTML = '';
+
+   cardsData.forEach(element => {
+     let cardItem = createCard(element);
+     scroll.appendChild(cardItem);
+
+   })
 
   const deleteButtons = document.querySelectorAll('.cross');
   deleteButtons.forEach(button => {
@@ -94,6 +103,7 @@ function renderList() {
   sumPrice();
 
   quantityCards();
+
 }
 
 function changePrice(e) {
@@ -128,6 +138,5 @@ function quantityCards() {
   var quantityElements = document.querySelector('.scroll').children.length;
   quantityItemAdded.innerHTML = `${quantityElements} Item added`;
 }
-
 
 renderList();
