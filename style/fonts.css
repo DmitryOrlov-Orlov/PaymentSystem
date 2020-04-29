@@ -4,6 +4,8 @@
 }
 
 .header-text-top{
+  /* transform: rotate(30deg);
+  transition: all .5s; */
   font-size: 35px;
   line-height: 32px;
   margin: 0;

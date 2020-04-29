@@ -40,17 +40,59 @@ var cardsData = [{
   }
 ]
 
+console.log(window.location.pathname);
 
-  function createBottle(product) {
-    let ilSpan = document.createElement('span');
-    ilSpan.innerHTML = `
+let pagePath = window.location.pathname;
+let pathIndex = '/PaymentSystem/index.html';
+let pathCartScreen = '/PaymentSystem/CartScreen.html';
+
+if (pagePath == pathIndex) {
+  console.log('dfsd');
+} else if (pagePath == pathCartScreen) {
+  console.log('1111111111111');
+}
+
+
+
+
+let gallerUL = document.querySelector('.gallery-ul');
+let blockWidth = 217;
+let position = 81;
+
+gallerUL.style.marginLeft = position + 'px';
+gallerUL.style.width = blockWidth * cardsData.length;
+let btnPrev = document.querySelector('.prev');
+btnPrev.onclick = funcPrev;
+
+function funcPrev() {
+  if (position < 81) {
+    position += blockWidth;
+    gallerUL.style.marginLeft = position + 'px';
+  }
+}
+
+let btnNext = document.querySelector('.next');
+btnNext.onclick = funcNext;
+
+function funcNext() {
+  let bias = 353;
+  let restriction = (blockWidth * cardsData.length) - bias;
+  if (position > -restriction) {
+    position -= blockWidth;
+    gallerUL.style.marginLeft = position + 'px';
+  }
+}
+
+function createBottle(product) {
+  let ilSpan = document.createElement('span');
+  ilSpan.innerHTML = `
       <span class="gallery-block">
         <div class="gallery-img" style="background-image:url(${product.imgUrlBig})"></div>
         <span class="like"></span>
       </span>  
-    `  
-    return ilSpan;
-  }
+    `
+  return ilSpan;
+}
 
 function createCard(product) {
   var rectangle = document.createElement('div');
@@ -69,26 +111,29 @@ function createCard(product) {
   return rectangle;
 }
 
-
 function renderList() {
 
-    let galleryUl = document.querySelector('.gallery-ul');
+  let galleryUl = document.querySelector('.gallery-ul');
+
+  if (galleryUl) {
     galleryUl.innerHTML = '';
 
     cardsData.forEach(element => {
       let bootleItem = createBottle(element);
       galleryUl.appendChild(bootleItem);
     })
+  }
 
+  let scroll = document.querySelector('.scroll');
+  if (scroll) {
+    scroll.innerHTML = '';
 
-   let scroll = document.querySelector('.scroll');
-   scroll.innerHTML = '';
+    cardsData.forEach(element => {
+      let cardItem = createCard(element);
+      scroll.appendChild(cardItem);
 
-   cardsData.forEach(element => {
-     let cardItem = createCard(element);
-     scroll.appendChild(cardItem);
-
-   })
+    })
+  }
 
   const deleteButtons = document.querySelectorAll('.cross');
   deleteButtons.forEach(button => {
@@ -97,19 +142,18 @@ function renderList() {
 
   const priceInputs = document.querySelectorAll('.quantity');
   priceInputs.forEach(input => {
-    input.onchange = changePrice;
+    input.onchange = changeAmount;
   });
 
   sumPrice();
 
   quantityCards();
-
 }
 
-function changePrice(e) {
+function changeAmount(e) {
   const id = Number(e.target.getAttribute('data-id'));
   const amount = Number(e.target.value);
-
+  console.log(e);
   /* let cardItem = cardsData.find(i => id === i.id); */
   cardsData.forEach(i => {
     if (id === i.id) {
