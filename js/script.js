@@ -47,10 +47,10 @@ function renderList() {
   let pagePath = window.location.pathname;
   let pathIndex = '/PaymentSystem/index.html';
   let pathCartScreen = '/PaymentSystem/CartScreen.html';
-  let galleryUl = document.querySelector('.gallery-ul');
 
+  /* Условие. код для первой страницы */
+  let galleryUl = document.querySelector('.gallery-ul');
   if (pagePath === pathIndex) {
-    /* Условие. код для первой страницы */
     if (galleryUl) {
       galleryUl.innerHTML = '';
       cardsData.forEach(element => {
@@ -64,13 +64,24 @@ function renderList() {
     let position = 81;
     gallerUL.style.marginLeft = position + 'px';
     gallerUL.style.width = blockWidth * cardsData.length;
+
     let btnPrev = document.querySelector('.prev');
     btnPrev.onclick = funcPrev;
+
+    let listFirstPrice = document.querySelector('.price');
+    let sumAmountCard = 0;
+    listFirstPrice.innerHTML = `${cardsData[sumAmountCard].price}`
 
     function funcPrev() {
       if (position < 81) {
         position += blockWidth;
         gallerUL.style.marginLeft = position + 'px';
+
+        if (sumAmountCard > 0) {
+          sumAmountCard--;
+          listFirstPrice.innerHTML = `${cardsData[sumAmountCard].price}`
+          console.log(sumAmountCard);
+        }
       }
     }
 
@@ -83,7 +94,14 @@ function renderList() {
       if (position > -restriction) {
         position -= blockWidth;
         gallerUL.style.marginLeft = position + 'px';
+
+        if (sumAmountCard < cardsData.length) {
+          sumAmountCard++;
+          listFirstPrice.innerHTML = `${cardsData[sumAmountCard].price}`;
+          console.log(sumAmountCard);
+        }
       }
+
     }
 
     function createBottle(product) {
@@ -96,7 +114,10 @@ function renderList() {
     `
       return ilSpan;
     }
-    
+    /* при нажатии кнопок слева и справа будет изметяться цена */
+
+
+
 
 
 
