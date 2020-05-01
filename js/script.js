@@ -60,7 +60,7 @@ function renderList() {
     }
 
     let gallerUL = document.querySelector('.gallery-ul');
-    let blockWidth = 217;
+    let blockWidth = 213;
     let position = 81;
     gallerUL.style.marginLeft = position + 'px';
     gallerUL.style.width = blockWidth * cardsData.length;
