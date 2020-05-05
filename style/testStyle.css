@@ -6,20 +6,19 @@ body{
   font-size: 27px;
 }
 
-.btnRight{
-  width: 150px;
-  height: 50px;
-  margin: 10px;
-}
-.btnLeft{
-  width: 150px;
-  height: 50px;
-  margin: 10px;
-}
-
 .price{
   width: 150px;
   height: 50px;
   background-color: rgb(231, 177, 177);
-  margin: 10px;
+
+}
+
+.vvod{
+  width: 150px;
+  height: 50px;
+}
+
+.start{
+  width: 150px;
+  height: 50px;
 }

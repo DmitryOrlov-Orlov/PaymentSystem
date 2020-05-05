@@ -24,34 +24,27 @@ let cardsData = [{
   },
 ]
 
-function aaaa() {
-  let btnLeft = document.querySelector('.btnLeft');
-  btnLeft.onclick = changeLeftPrice;
+function renderBlock() {
+  let mainBlock = document.querySelector('.mainBlock');
+  let divBlock = document.createElement('div');
+  divBlock.innerHTML = `
+      <input class="vvod" placeholder="Quantity" type="number">
+      <button class="start">1</button>
+      <div class="price"></div>
+  `
+  mainBlock.append(divBlock);
 
-  let price = document.querySelector('.price');
-
-  let btnRight = document.querySelector('.btnRight');
-  btnRight.onclick = changeRightPrice;
-
-  let a = 0;
-  price.innerHTML = `${cardsData[a].price}`;
-
-  function changeLeftPrice() {
-    if (a < cardsData.length) {
-      a++;
-      price.innerHTML = `${cardsData[a].price}`;
-    }
-  }
-
-  function changeRightPrice() {
-    if (a >= 1) {
-      a--;
-      price.innerHTML = `${cardsData[a].price}`;
-    }
-  }
-
-
-
-
+  blockChange();
 }
-aaaa();
+
+function blockChange() {
+  let inputChange = document.createElement('input');
+  
+}
+
+
+
+
+
+
+renderBlock();
