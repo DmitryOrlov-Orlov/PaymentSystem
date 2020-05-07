@@ -103,17 +103,24 @@ function listFirstButtonPrevNext() {
   listFirstPrice.innerHTML = `${(cardsData[elementCard].price * cardsData[elementCard].amount.toFixed(2))}`;
   let btnNext = document.querySelector('.next');
   btnNext.onclick = buttonNext;
-  let inputButton = document.querySelector('.input-button-button');
-  inputButton.innerHTML = `${cardsData[elementCard].amount} Bottle`
-
+  let likeButton = document.querySelector('.input-button-button');
+  likeButton.innerHTML = `${cardsData[elementCard].amount} Bottle`;
+  let inputQuantity = document.querySelector('.input-button-input');
+  /* inputQuantity.onchange = xxx;
+  function xxx(e){
+    let aaa = e.target.value;
+    
+  } */
+  
   function buttonPrev() {
     if (position < 81) {
       position += blockWidth;
       galleryUl.style.marginLeft = position + 'px';
       if (elementCard > 0) {
         elementCard--;        
-        inputButton.innerHTML = `${cardsData[elementCard].amount} Bottle`
+        likeButton.innerHTML = `${cardsData[elementCard].amount} Bottle`
         listFirstPrice.innerHTML = `${(cardsData[elementCard].price * cardsData[elementCard].amount).toFixed(2)}`;
+        console.log(elementCard);
       }
     }
   }
@@ -127,7 +134,8 @@ function listFirstButtonPrevNext() {
       if (elementCard < cardsData.length) {
         elementCard++;
         listFirstPrice.innerHTML = `${(cardsData[elementCard].price * cardsData[elementCard].amount).toFixed(2)}`;
-        inputButton.innerHTML = `${cardsData[elementCard].amount} Bottle`
+        likeButton.innerHTML = `${cardsData[elementCard].amount} Bottle`;
+        console.log(elementCard);
       }
     }
   }
@@ -197,7 +205,6 @@ function blockChangeAmout() {
   function changeAmount(e) {
     const id = Number(e.target.getAttribute('data-id'));
     const amount = Number(e.target.value);
-    console.log(e);
     cardsData.forEach(i => {
       if (id === i.id) {
         i.amount = amount;
