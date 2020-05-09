@@ -6,19 +6,35 @@ body{
   font-size: 27px;
 }
 
+.start{
+  width: 150px;
+  height: 50px;
+  margin: 10px;
+}
+
+
 .price{
   width: 150px;
   height: 50px;
   background-color: rgb(231, 177, 177);
-
+  margin: 10px;
+}
+.good{
+  width: 100px;
+  height: 100px;
+  background-color: red;
 }
 
-.vvod{
-  width: 150px;
-  height: 50px;
+.green{
+  width: 100px;
+  height: 100px;
+  background-color: seagreen;
 }
 
-.start{
-  width: 150px;
-  height: 50px;
+.like{
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: url('../images/indexImages/like.svg') center no-repeat;
+
 }

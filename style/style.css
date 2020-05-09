@@ -17,6 +17,7 @@ body{
   height: 708px;  
   margin: 0 auto;
   background-color: rgb(255, 255, 255);
+  
 }
 
 .header{
@@ -104,19 +105,49 @@ body{
   display: block;
   width: 32px;
   height: 32px;
-  background: url('../images/indexImages/like.svg');
+  background: url('../images/indexImages/like.svg') center no-repeat;
   margin-top: -273px;
   margin-left: 175px;/* 207 */
 }
 
 .input-button{
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 217px;
   height: 53px;
   margin: 0 auto;
   margin-top: 24px;
   border-radius: 33px;
   background: #F6F6F8;
+}
+
+.btnPlus{
+  display: block;
+  background: url('../images/btnPlusMinus/plus.svg') center no-repeat;
+  border: 0;
+  border-radius: 100%;
+  width: 46px;
+  height: 46px;
+  box-shadow: 0; /* Параметры тени */
+  outline: none;
+}
+
+.scoreboard{
+  font-size: 13px;
+  line-height: 12px;
+  color: #979AA1;
+}
+
+
+.btnMinus{
+  display: block;
+  background: url('../images/btnPlusMinus/minus.svg') center no-repeat;
+  border: 0;
+  border-radius: 100%;
+  width: 46px;
+  height: 46px;
+  outline: none;
 }
 
 .price{

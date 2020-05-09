@@ -4,8 +4,8 @@ var cardsData = [{
     imgUrlBig: './images/CartScreen/img-first-big.svg',
     textTop: 'Golden fruit jam',
     price: 10.99,
-    amount: 2,
-    inBasket: false,
+    amount: 1,
+    inBasket: true,
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ var cardsData = [{
     imgUrlBig: './images/CartScreen/img-second-big.svg',
     textTop: 'Golden fruit jam',
     price: 20.99,
-    amount: 3,
+    amount: 1,
     inBasket: false,
   },
   {
@@ -22,8 +22,8 @@ var cardsData = [{
     imgUrlBig: './images/CartScreen/img-first-big.svg',
     textTop: 'Golden fruit jam',
     price: 30.99,
-    amount: 4,
-    inBasket: false,
+    amount: 1,
+    inBasket: true,
   },
   {
     id: 4,
@@ -31,7 +31,7 @@ var cardsData = [{
     imgUrlBig: './images/CartScreen/img-first-big.svg',
     textTop: 'Golden fruit jam',
     price: 40.99,
-    amount: 5,
+    amount: 1,
     inBasket: false,
   },
   {
@@ -40,12 +40,11 @@ var cardsData = [{
     imgUrlBig: './images/CartScreen/img-first-big.svg',
     textTop: 'Golden fruit jam',
     price: 50.99,
-    amount: 6,
+    amount: 1,
     inBasket: false,
   }
 ]
 
-let testTest = document.querySelector('.gallery-block');
 
 function renderList() {
   let pagePath = window.location.pathname;
@@ -82,9 +81,11 @@ function blockGllaryUl() {
 function createBottle(product) {
   let ilSpan = document.createElement('span');
   ilSpan.innerHTML = `
-    <span class="gallery-block">
+    <span class="gallery-block" >
       <div class="gallery-img" style="background-image:url(${product.imgUrlBig})"></div>
-      <span class="like"></span>
+      <div class="like-block" data-id=${product.id}>
+      <div class="like"></div>
+      </div>      
     </span>  
   `
   return ilSpan;
@@ -103,24 +104,76 @@ function listFirstButtonPrevNext() {
   listFirstPrice.innerHTML = `${(cardsData[elementCard].price * cardsData[elementCard].amount.toFixed(2))}`;
   let btnNext = document.querySelector('.next');
   btnNext.onclick = buttonNext;
-  let likeButton = document.querySelector('.input-button-button');
-  likeButton.innerHTML = `${cardsData[elementCard].amount} Bottle`;
-  let inputQuantity = document.querySelector('.input-button-input');
-  /* inputQuantity.onchange = xxx;
-  function xxx(e){
-    let aaa = e.target.value;
-    
-  } */
+  let btnMinus = document.querySelector('.btnMinus');
+  btnMinus.onclick = fMinus;
+  let btnPlus = document.querySelector('.btnPlus');
+  btnPlus.onclick = fPlus;
+  let scoreboard = document.querySelector('.scoreboard');
+  scoreboard.innerHTML = `Quantity ${cardsData[elementCard].amount}`
   
+
+
+
+  let heart = document.querySelector('.heart');
+  heart.onclick = fLike;
+  
+  let galleryBlock = document.querySelector('.like-block');
+  galleryBlock.innerHTML = `
+      <div class="like"></div>
+      `
+  let status = 1;
+  function fLike() {
+    
+    status = status == true ? false : true;
+    if (status == true) {
+      console.log('тут = true');
+      galleryBlock.innerHTML = `
+      <div class="like"></div>
+      `
+      console.log(elementCard);
+    } else if (status == false) {
+      console.log('тут = false');
+      galleryBlock.innerHTML = ''
+    }
+  }
+
+
+
+
+  
+  let add = 1;
+
+  function fMinus() {
+    if (add >= 1) {
+      add--;
+      cardsData[elementCard].amount = add;
+      scoreboard.innerHTML = `Quantity ${cardsData[elementCard].amount}`
+      listFirstPrice.innerHTML = `${(cardsData[elementCard].price * cardsData[elementCard].amount).toFixed(2)}`;
+      console.log(add);
+    }
+  }
+
+  function fPlus() {
+    add++;
+    cardsData[elementCard].amount = add;
+    scoreboard.innerHTML = `Quantity ${cardsData[elementCard].amount}`
+    console.log('лог в плюс ' + elementCard);
+    console.log('лог в плюс ' + add);
+    listFirstPrice.innerHTML = `${(cardsData[elementCard].price * cardsData[elementCard].amount).toFixed(2)}`
+
+  }
+
   function buttonPrev() {
     if (position < 81) {
       position += blockWidth;
       galleryUl.style.marginLeft = position + 'px';
       if (elementCard > 0) {
-        elementCard--;        
-        likeButton.innerHTML = `${cardsData[elementCard].amount} Bottle`
-        listFirstPrice.innerHTML = `${(cardsData[elementCard].price * cardsData[elementCard].amount).toFixed(2)}`;
+        elementCard--;
+        scoreboard.innerHTML = `Quantity ${cardsData[elementCard].amount}`;
         console.log(elementCard);
+        add = cardsData[elementCard].amount;
+        listFirstPrice.innerHTML = `${(cardsData[elementCard].price * cardsData[elementCard].amount).toFixed(2)}`;
+       
       }
     }
   }
@@ -133,22 +186,15 @@ function listFirstButtonPrevNext() {
       galleryUl.style.marginLeft = position + 'px';
       if (elementCard < cardsData.length) {
         elementCard++;
+        scoreboard.innerHTML = `Quantity ${cardsData[elementCard].amount}`
+        add = cardsData[elementCard].amount;
         listFirstPrice.innerHTML = `${(cardsData[elementCard].price * cardsData[elementCard].amount).toFixed(2)}`;
-        likeButton.innerHTML = `${cardsData[elementCard].amount} Bottle`;
-        console.log(elementCard);
+        console.log(elementCard); 
       }
     }
   }
+
 }
-
-
-
-
-
-
-
-
-
 
 
 

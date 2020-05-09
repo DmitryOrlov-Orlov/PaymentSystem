@@ -4,7 +4,8 @@ let cardsData = [{
     imgUrlBig: './images/CartScreen/img-first-big.svg',
     textTop: 'Golden fruit jam',
     price: 10.99,
-    amount: 1
+    amount: 1,
+    inBasket: false
   },
   {
     id: 2,
@@ -12,7 +13,8 @@ let cardsData = [{
     imgUrlBig: './images/CartScreen/img-second-big.svg',
     textTop: 'Golden fruit jam',
     price: 20.99,
-    amount: 1
+    amount: 1,
+    inBasket: true
   },
   {
     id: 3,
@@ -20,31 +22,31 @@ let cardsData = [{
     imgUrlBig: './images/CartScreen/img-first-big.svg',
     textTop: 'Golden fruit jam',
     price: 30.99,
-    amount: 2
+    amount: 2,
+    inBasket: false
   },
 ]
 
-function renderBlock() {
-  let mainBlock = document.querySelector('.mainBlock');
-  let divBlock = document.createElement('div');
-  divBlock.innerHTML = `
-      <input class="vvod" placeholder="Quantity" type="number">
-      <button class="start">1</button>
-      <div class="price"></div>
-  `
-  mainBlock.append(divBlock);
 
-  blockChange();
+let start = document.querySelector('.start');
+start.onclick = fStart;
+let newDiv = document.createElement('div');
+let block = document.querySelector('.block');
+let status = cardsData[0].inBasket
+
+
+function fStart() {
+  status = status == false ? true : false;
+
+  if (status === true) {
+    console.log('тут - true');
+    block.innerHTML = `
+    <div class="like"></div>
+    `
+    
+  } else if (status === false) {
+    console.log('тут - false');
+    block.innerHTML = ''
+  }
 }
 
-function blockChange() {
-  let inputChange = document.createElement('input');
-  
-}
-
-
-
-
-
-
-renderBlock();
